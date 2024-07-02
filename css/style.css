@@ -1,0 +1,230 @@
+@font-face {
+    font-family: "Canterbury";
+    src: url(../font/Canterbury.ttf);
+}
+
+:root {
+    --background-primary: #0A0F12;
+    --background-secondary: #1B1E1F;
+    --text-primary: #FFFFFF;
+
+    --font-fancy: "Canterbury";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../img/background.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 60px;
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+    font-size: 18px;
+}
+
+a {
+    color: var(--text-primary);
+}
+
+/* HEADER */
+
+header {
+    background-color: var(--background-secondary);
+    box-shadow: 0 5px 25px 5px var(--background-primary);
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    z-index: 1;
+}
+
+.header__title {
+    font-family: var(--font-fancy);
+    letter-spacing: 3px;
+    font-size: 32px;
+    margin: 5px;
+    
+}
+
+.header__instagram-link, .header__instagram-link__img {
+    height: 50px;
+}
+
+/* PRESENTATION */
+
+.presentation {
+    margin: 10vw 0;
+    text-align: center;
+}
+
+.presentation__title {
+    font-size: clamp(24px, 5vw, 64px);
+    text-shadow: 2px 2px black;
+}
+
+/* CONTACT */
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.start-hidden {
+    display: none;
+}
+
+.contact__img {
+    width: clamp(290px, calc(70vw + 30px), 530px);
+    border-radius: 15px;
+}
+
+/* CONTACT__FORM */
+
+.contact__form {
+    background-color: var(--background-secondary);
+    border-radius: 15px;
+    width: clamp(260px, 70vw, 500px);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pos-relative {
+    position: relative;
+}
+
+.label-name, .label-email, .label-text-area {
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    background-color: var(--background-secondary);
+    padding: 0 5px;
+    transition: 0.2s;
+}
+
+.input-name:focus + .label-name,
+.input-name:not(:placeholder-shown) + .label-name {
+    translate: 0px -20px;
+}
+
+.input-email:focus + .label-email,
+.input-email:not(:placeholder-shown) + .label-email {
+    translate: 0px -20px;
+}
+
+.text-area:focus + .label-text-area,
+.text-area:not(:placeholder-shown) + .label-text-area {
+    translate: 0px -20px;
+}
+
+.input-name, .input-email, .text-area, .container-input-file {
+    width: calc(100% - 14px);
+    background-color: transparent;
+    border: 2px solid var(--text-primary);
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 18px;
+    color: var(--text-primary);
+    &:focus {
+        outline: none;
+    }
+    &::placeholder {
+        user-select: none;
+    }
+}
+
+.text-area {
+    height: 100px;
+    resize: none;
+}
+
+.container-input-file {
+    display: flex;
+    flex-direction: column;
+}
+
+.label-input-file {
+    margin: 4px;
+}
+
+.input-file {
+    margin: 4px;
+    font-size: 15px;
+}
+
+.submit-button {
+    font-size: 18px;
+    background-color: var(--text-primary);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--background-secondary);
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer__dev {
+    padding: 10px;
+    font-size: 18px;
+}
+
+.dev-link {
+    padding: 10px;
+}
+
+.footer__div-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+ul {
+    padding: 10px 0;
+}
+
+li {
+    padding: 7px 3px;
+}
+
+@media (width >= 900px) {
+    .contact {
+        flex-direction: row;
+        justify-content: center;
+        align-items: normal;
+    }
+
+    .contact__img-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .start-hidden {
+        display: block;
+    }
+
+    .contact__img {
+        width: clamp(390px, calc(40vw + 30px), 530px);
+        height: calc(50% - 10px);
+        object-fit: cover;
+    }
+
+    .contact__form {
+        width: clamp(360px, 40vw, 500px);
+        height: fit-content;
+    }
+}

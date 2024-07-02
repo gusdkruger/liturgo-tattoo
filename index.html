@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Liturgo Tattoo</title>
+        <link rel="icon" type="image/x-icon" href="./img/favicon.webp">
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="./js/resizeImgContainer.js"></script>
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header>
+            <h2 class="header__title">Liturgo Tattoo</h2>
+            <a class="header__instagram-link" href="https://www.instagram.com/" target="_blank">
+                <img class="header__instagram-link__img" src="./img/instagram.svg" alt="Instagram Logo">
+            </a>
+        </header>
+        <main>
+            <!-- PRESENTATION -->
+            <section class="presentation">
+                <h1 class="presentation__title">Welcome to Liturgo Tattoo</h1>
+                <h2 class="presentation__title">Where Art and Soul Converge</h2>
+            </section>
+            <!-- CONTACT -->
+            <section class="contact">
+                <div class="contact__img-container">
+                    <img class="contact__img" src="./img/contact-img1.webp" alt="">
+                    <img class="contact__img start-hidden" src="./img/contact-img2.webp" alt="">
+                </div>
+                <form class="contact__form">
+                    <h2>Contact</h2>
+                    <p>Fill out the form below to schedule an appointment or request a price quote. Remember to tell us about the tattoo design you have in mind. Where would you like it, the approximate dimensions and any colors you want to include.</p>
+                    <!-- INPUT NAME -->
+                    <div class="pos-relative">
+                        <input class="input-name" id="input-name" type="text" placeholder=" " maxlength="30" required>
+                        <label class="label-name" for="input-name">Name</label>
+                    </div>
+                    <!-- INPUT EMAIL -->
+                    <div class="pos-relative">
+                        <input class="input-email" id="input-email" type="email" placeholder=" " maxlength="30" required>
+                        <label class="label-email" for="input-email">Email</label>
+                    </div>
+                    <!-- TEXT AREA -->
+                    <div class="pos-relative">
+                        <textarea class="text-area" id="text-area" placeholder=" " required></textarea>
+                        <label class="label-text-area" for="text-area">Your message</label>
+                    </div>
+                    <!-- INPUT FILE -->
+                    <div class="container-input-file">
+                        <label class="label-input-file" for="input-file">You can also send images</label>
+                        <input class="input-file" id="input-file" type="file" accept=".jpg, .png" multiple>  
+                    </div>
+                    <!-- SUBMIT -->
+                    <button class="submit-button" type="submit">Submit</button>
+                </form>
+            </section>
+        </main>
+        <!-- FOOTER -->
+        <footer>
+            <h3 class="footer__dev">Devoleped by Gustavo Kruger</h3>
+            <div class="footer__div-links">
+                <a class="dev-link" href="https://github.com/gusdkruger" target="_blank">GitHub</a>
+                <a class="dev-link" href="https://www.linkedin.com/in/gusdkruger/" target="_blank">LinkedIn</a>
+            </div>
+            <hr>
+            <ul>
+                <li>
+                    <a href="https://www.1001fonts.com/canterbury-font.html" target="_blank">Header title font</a> by <a href="https://www.1001fonts.com/users/steffmann/" target="_blank">Dieter Steffmann</a> from <a href="https://www.1001fonts.com/" target="_blank">1001 Fonts</a>
+                </li>
+                <li>
+                    <a href="https://uxwing.com/instagram-white-icon/" target="_blank">Instagram logo</a> by <a href="https://uxwing.com/" target="_blank">UXWing</a>
+                </li>
+                <li>
+                    <a href="https://pixabay.com/photos/woman-tattoos-body-art-1867485/" target="_blank">Background image</a> by <a href="https://pixabay.com/users/pexels-2286921/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1867485" target="_blank">Pexels</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1867485" target="_blank">Pixabay</a>
+                </li>
+                <li>
+                    <a href="https://pixabay.com/photos/people-man-woman-girl-guy-skin-2598359/" target="_blank">Contact Image 1</a> by <a href="https://pixabay.com/users/stocksnap-894430/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2598359" target="_blank">StockSnap</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2598359" target="_blank">Pixabay</a>
+                </li>
+                <li>
+                    <a href="https://pixabay.com/photos/tattoo-artist-tattoo-design-556036/" target="_blank">Contact Image 2</a> by <a href="https://pixabay.com/users/mbragion-516689/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=556036" target="_blank">Marcelo Bragion</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=556036" target="_blank">Pixabay</a>
+                </li>
+            </ul>
+        </footer>
+    </body>
+</html>
