@@ -1,13 +1,13 @@
 function adjustImgContainerHeight() {
-    let imgContainer = document.querySelector('.contact__img-container');
-    if (screen.width >= 900) {
-        let form = document.querySelector('.contact__form');
+    const imgContainer = document.querySelector('.contact__img-container');
+    if (window.innerWidth >= 900) {
+        const form = document.querySelector('.contact__form');
         if (imgContainer && form) {
             imgContainer.style.height = `${form.offsetHeight}px`;
         }
     }
-    else {
-        imgContainer.style.height = `100%`;
+    else if (imgContainer) {
+        imgContainer.style.height = 'fit-content';
     }
 }
 
