@@ -1,9 +1,3 @@
-# WORK IN PROGRESS
-
-Still need to add 2 or 3 more sections.
-
----
-
 # Liturgo Tattoo
 
 <a href="https://gusdkruger.github.io/liturgo-tattoo/" target="_blank">Github Pages Link</a>
