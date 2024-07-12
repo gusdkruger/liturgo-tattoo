@@ -53,7 +53,7 @@ header {
     font-family: var(--font-fancy);
     letter-spacing: 3px;
     font-size: 32px;
-    padding: 0 5px 4px;
+    padding: 0 5px 5px;
 }
 
 .header__nav {
@@ -77,6 +77,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 0px;
 }
 
 .presentation__title {
@@ -85,22 +86,52 @@ header {
     text-align: center;
 }
 
-/* ABOUT US */
+/* ABOUT */
 
 .about {
-    text-align: center;
-    width: clamp(300px, calc(85vw + 30px), 530px);
+    margin-top: 0px;
+    width: 95vw;
 }
 
 .about__container {
-    background-color: var(--background-primary);
-    padding: 10px;
-    border-radius: 15px;
-    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+    align-items: center;
+    gap: 20px;
 }
 
-.about__img {
-    display: none;
+.about__img-container {
+    width: 100%;
+    max-width: 435px;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    gap: 15px;
+}
+
+.about__img-vertical {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 15px;
+    object-position: 0% 80%;
+}
+
+.about__img-horizontal {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 15px;
+    max-width: 435px;
+}
+
+.about__text {
+    text-align: center;
+    width: 100%;
+    max-width: 405px;
+    padding: 15px;
+    background-color: var(--background-secondary);
+    border-radius: 15px;
 }
 
 /* SERVICES */
@@ -191,7 +222,6 @@ header {
 .contact__img-container__img {
     width: clamp(300px, calc(85vw + 30px), 530px);
     border-radius: 15px;
-    filter: grayscale(0.3);
 }
 
 .start-hidden {
@@ -333,30 +363,17 @@ footer {
 }
 
 @media (width >= 900px) {
-    /* ABOUT US */
+    /* ABOUT */
 
-    .about {
-        width: 800px;
-    }
-
-    .about__container {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .about__img {
-        display: block;
-        width: 300px;
-        border-radius: 15px;
-        filter: grayscale(0.3);
+    .about__container-reverse {
+        flex-direction: row-reverse;
     }
 
     .about__text {
-        width: 320px;
-        text-align: justify;
-        padding: 15px;
-        align-self: center;
-        font-size: 1.25em;
+        width: 370px;
+        height: 214px;
+        display: flex;
+        align-items: center;
     }
 
     /* CONTACT */
