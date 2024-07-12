@@ -23,15 +23,16 @@ html {
 }
 
 body {
-    background-image: url(../img/background.webp);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: 0 60px;
     background-color: var(--background-primary);
 }
 
 section {
     margin: 60px auto;
+}
+
+.section__title {
+    font-size: 32px;
+    text-align: center;
 }
 
 /* HEADER */
@@ -66,26 +67,29 @@ header {
 /* PRESENTATION */
 
 .presentation {
-    margin: 10vw 0;
-    text-align: center;
+    width: 100vw;
+    max-width: 1280px;
+    aspect-ratio: 16 / 9;
+    margin-top: 0;
+    background-image: url("../img/presentation-img.webp");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .presentation__title {
-    font-size: clamp(1.34em, 5vw, 3.5em);
+    font-size: clamp(24px, 6vw, 64px);
     text-shadow: 2px 2px black;
+    text-align: center;
 }
 
-/* ABOUT */
+/* ABOUT US */
 
 .about {
     text-align: center;
     width: clamp(300px, calc(85vw + 30px), 530px);
-}
-
-.about__title {
-    font-size: 1.75em;
-    text-shadow: 2px 2px black;
-    margin: 15px 0;
 }
 
 .about__container {
@@ -100,11 +104,6 @@ header {
 }
 
 /* SERVICES */
-
-.services__title {
-    font-size: 1.75em;
-    text-align: center;
-}
 
 .services__card-container {
     display: flex;
@@ -126,14 +125,12 @@ header {
 }
 
 .card-icon {
-    background-color: var(--text-primary);
-    border-radius: 15px;
     width: 100px;
-    padding: 5px;
+    filter: invert();
 }
 
 .card-title {
-    font-size: 1.5em;
+    font-size: 27px;
 }
 
 .card-text {
@@ -147,15 +144,11 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-}
-
-.email-list__title {
-    font-size: 1.75em;
+    gap: 15px;
 }
 
 .email-list__text {
-    font-size: 1.25em;
+    font-size: 22px;
     text-align: center;
 }
 
@@ -165,7 +158,7 @@ header {
 }
 
 .input-email-list, .button-email-list {
-    font-size: 1.25em;
+    font-size: 22px;
     padding: 7px 13px;
 }
 
@@ -190,23 +183,19 @@ header {
 
 .contact {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
-.contact__form__title {
-    font-size: 1.5em;
+.contact__img-container__img {
+    width: clamp(300px, calc(85vw + 30px), 530px);
+    border-radius: 15px;
+    filter: grayscale(0.3);
 }
 
 .start-hidden {
     display: none;
-}
-
-.contact__img {
-    width: clamp(300px, calc(85vw + 30px), 530px);
-    border-radius: 15px;
-    filter: grayscale(0.3);
 }
 
 /* CONTACT__FORM */
@@ -221,11 +210,15 @@ header {
     gap: 20px;
 }
 
-.pos-relative {
+.contact__form__title {
+    font-size: 27px;
+}
+
+.contact__form__container {
     position: relative;
 }
 
-.label-name, .label-email, .label-text-area {
+.label-name, .label-email, .label-message {
     position: absolute;
     left: 7px;
     top: 7px;
@@ -244,12 +237,12 @@ header {
     translate: 0px -20px;
 }
 
-.text-area:focus + .label-text-area,
-.text-area:not(:placeholder-shown) + .label-text-area {
+.input-message:focus + .label-message,
+.input-message:not(:placeholder-shown) + .label-message {
     translate: 0px -20px;
 }
 
-.input-name, .input-email, .text-area, .container-input-file {
+.input-name, .input-email, .input-message, .container-input-file {
     width: calc(100% - 14px);
     background-color: transparent;
     border: 2px solid var(--text-primary);
@@ -263,7 +256,7 @@ header {
     }
 }
 
-.text-area {
+.input-message {
     height: 100px;
     resize: none;
 }
@@ -297,21 +290,26 @@ footer {
     text-align: center;
 }
 
-.footer__dev, .dev-link {
+.footer__dev {
+    font-size: 20px;
     padding: 10px;
 }
 
-.footer__div-links {
+.footer__dev-link-container {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-ul {
+.dev-link {
+    padding: 10px;
+}
+
+.footer__credits-list {
     padding: 10px 0;
 }
 
-li {
+.footer__credits-list li {
     padding: 7px 3px;
 }
 
@@ -361,19 +359,7 @@ li {
         font-size: 1.25em;
     }
 
-    /* EMAIL LIST */
-
-    .email-list {
-        gap: 20px;
-    }
-
     /* CONTACT */
-
-    .contact {
-        flex-direction: row;
-        justify-content: center;
-        align-items: normal;
-    }
 
     .contact__img-container {
         display: flex;
@@ -385,7 +371,7 @@ li {
         display: block;
     }
 
-    .contact__img {
+    .contact__img-container__img {
         width: clamp(390px, calc(40vw + 30px), 530px);
         height: calc(50% - 10px);
         object-fit: cover;

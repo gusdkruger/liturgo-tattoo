@@ -28,7 +28,7 @@
             </section>
             <!-- ABOUT US -->
             <section class="about">
-                <h2 class="about__title">About Us</h2>
+                <h2 class="section__title">About Us</h2>
                 <div class="about__container">
                     <img class="about__img" src="./img/about-img1.webp" alt="A pink rose with two tattoo machines intersecting at the top against a dark background.">
                     <p class="about__text">We pride ourselves on our ability to transform your ideas into beautiful tattoos that you'll cherish for a lifetime. Whether you're looking for a small, delicate design or a full sleeve masterpiece, we are here to bring your vision to life with precision and creativity.</p>
@@ -38,10 +38,9 @@
                     <img class="about__img" src="./img/about-img2.webp" alt="A person with tattoos sits on a bed with teal sheets, facing away and looking down, partially lit by blue-green light.">
                 </div>
             </section>
-                
             <!-- SERVICES -->
             <section class="services">
-                <h2 class="services__title">Services</h2>
+                <h2 class="section__title">Services</h2>
                 <div class="services__card-container">
                     <div class="card">
                         <img class="card-icon" src="./img/tatto-icon.webp" alt="Tattoo icon">
@@ -62,7 +61,7 @@
             </section>
             <!-- EMAIL LIST -->
             <section class="email-list">
-                <h2 class="email-list__title">Join Our Email List</h2>
+                <h2 class="section__title">Join Our Email List</h2>
                 <p class="email-list__text">Stay updated with the latest news and special promotions!</p>
                 <form class="email-list__form">
                     <input class="input-email-list" type="email" placeholder="Email" maxlength="255" required>
@@ -72,26 +71,27 @@
             <!-- CONTACT -->
             <section class="contact">
                 <div class="contact__img-container">
-                    <img class="contact__img" src="./img/contact-img1.webp" alt="A man and woman, both with visible tattoos, are posed back-to-back. The man looks downward while the woman gazes over her shoulder. Both wear dark clothing.">
-                    <img class="contact__img start-hidden" src="./img/contact-img2.webp" alt="A gloved hand holds a tattoo machine against a dark background.">
+                    <img class="contact__img-container__img" src="./img/contact-img1.webp" alt="A man and woman, both with visible tattoos, are posed back-to-back. The man looks downward while the woman gazes over her shoulder. Both wear dark clothing.">
+                    <img class="contact__img-container__img start-hidden" src="./img/contact-img2.webp" alt="A gloved hand holds a tattoo machine against a dark background.">
                 </div>
+                <!-- CONTACT__FORM -->
                 <form class="contact__form">
                     <h2 class="contact__form__title">Contact</h2>
                     <p>Fill out the form below to schedule an appointment or request a price quote. Remember to tell us about the tattoo design you have in mind. Where would you like it, the approximate dimensions and any colors you want to include.</p>
                     <!-- INPUT NAME -->
-                    <div class="pos-relative">
+                    <div class="contact__form__container">
                         <input class="input-name" id="input-name" type="text" placeholder=" " maxlength="255" required>
                         <label class="label-name" for="input-name">Name</label>
                     </div>
                     <!-- INPUT EMAIL -->
-                    <div class="pos-relative">
+                    <div class="contact__form__container">
                         <input class="input-email" id="input-email" type="email" placeholder=" " maxlength="255" required>
                         <label class="label-email" for="input-email">Email</label>
                     </div>
                     <!-- TEXT AREA -->
-                    <div class="pos-relative">
-                        <textarea class="text-area" id="text-area" placeholder=" " required></textarea>
-                        <label class="label-text-area" for="text-area">Your message</label>
+                    <div class="contact__form__container">
+                        <textarea class="input-message" id="input-message" placeholder=" " maxlength="3000" required></textarea>
+                        <label class="label-message" for="input-message">Your message</label>
                     </div>
                     <!-- INPUT FILE -->
                     <div class="container-input-file">
@@ -106,12 +106,12 @@
         <!-- FOOTER -->
         <footer>
             <h3 class="footer__dev">Devoleped by Gustavo Kruger</h3>
-            <div class="footer__div-links">
+            <div class="footer__dev-link-container">
                 <a class="dev-link" href="https://github.com/gusdkruger" target="_blank">GitHub</a>
                 <a class="dev-link" href="https://www.linkedin.com/in/gusdkruger/" target="_blank">LinkedIn</a>
             </div>
             <hr>
-            <ul>
+            <ul class="footer__credits-list">
                 <li>
                     <a href="https://www.1001fonts.com/canterbury-font.html" target="_blank">Header title font</a> by <a href="https://www.1001fonts.com/users/steffmann/" target="_blank">Dieter Steffmann</a> from <a href="https://www.1001fonts.com/" target="_blank">1001 Fonts</a>
                 </li>
@@ -119,10 +119,7 @@
                     <a href="https://uxwing.com/instagram-white-icon/" target="_blank">Instagram logo</a> by <a href="https://uxwing.com/" target="_blank">UXWing</a>
                 </li>
                 <li>
-                    <a href="https://pixabay.com/photos/woman-tattoos-body-art-1867485/" target="_blank">Background image</a> by <a href="https://pixabay.com/users/pexels-2286921/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1867485" target="_blank">Pexels</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1867485" target="_blank">Pixabay</a>
-                </li>
-                <li>
-                    Texts generated with the help of <a href="https://chatgpt.com/" target="_blank">ChatGPT</a> from <a href="https://openai.com/" target="_blank">OpeanAI</a>
+                    <a href="https://pixabay.com/photos/woman-tattoos-body-art-1867485/" target="_blank">Presentation image</a> by <a href="https://pixabay.com/users/pexels-2286921/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1867485" target="_blank">Pexels</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1867485" target="_blank">Pixabay</a>
                 </li>
                 <li>
                     <a href="https://pixabay.com/photos/tattoo-machine-tattoo-pen-rose-7027602/" target="_blank">About image 1</a> by <a href="https://pixabay.com/users/pic_panther-23699327/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7027602" target="_blank">Jake Parkinson</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7027602" target="_blank">Pixabay</a>
@@ -132,6 +129,9 @@
                 </li>
                 <li>
                     Alt text generated by <a href="https://alttext.ai/" target="_blank">alttext.ai</a>
+                </li>
+                <li>
+                    Texts generated with the help of <a href="https://chatgpt.com/" target="_blank">ChatGPT</a> from <a href="https://openai.com/" target="_blank">OpeanAI</a>
                 </li>
                 <li>
                     <a href="https://www.flaticon.com/free-icon/tattoo-machine_4357990?term=tattoo&page=1&position=2&origin=search&related_id=4357990" target="_blank">Tattoo icon</a> br <a href="https://www.flaticon.com/authors/freepik" target="_blank">Freepik</a> from <a href="https://www.flaticon.com/" target="_blank">Flaticon</a>
